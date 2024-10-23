@@ -17,13 +17,13 @@
 1. Clone the repository:
 
    ```
-   git clone https://github.com/Lubitzy/cspr.fans-airdrop-bot.git
+   git clone https://github.com/Lubitzy/casper-airdrop-bot.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd cspr.fans-airdrop-bot
+   cd casper-airdrop-bot
    ```
 
 3. Install the required dependencies:
