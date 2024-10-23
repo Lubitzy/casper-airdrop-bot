@@ -17,9 +17,7 @@ const {
 } = require('./src/ui')
 
 const TOKENS = [
-    process.env.QUERY_ID_1,
-    process.env.QUERY_ID_2,
-    process.env.QUERY_ID_3
+    process.env.QUERY_ID_1
 ]
 
 async function main() {

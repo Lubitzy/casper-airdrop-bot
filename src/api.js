@@ -29,11 +29,11 @@ async function getName(token) {
 
 async function getBalance(token) {
     const response = await axios({
-        url: 'https://api.cspr.community/api/users/me',
+        url: 'https://api.cspr.community/api/users/me/tasks',
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
     })
-    return response.data.points
+    return response.data.balances[0].balance
 }
 
 async function getTask(token) {
