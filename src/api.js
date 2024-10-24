@@ -2,7 +2,7 @@ const axios = require('axios')
 
 async function getUID(token) {
     const response = await axios({
-        url: 'https://api.cspr.community/api/users/me',
+        url: 'https://api2.cspr.community/api/users/me',
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
     })
@@ -11,7 +11,7 @@ async function getUID(token) {
 
 async function getPosition(token) {
     const response = await axios({
-        url: 'https://api.cspr.community/api/airdrop-info?leaderboard_offset=0&leaderboard_limit=3',
+        url: 'https://api2.cspr.community/api/airdrop-info?leaderboard_offset=0&leaderboard_limit=3',
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
     })
@@ -20,7 +20,7 @@ async function getPosition(token) {
 
 async function getName(token) {
     const response = await axios({
-        url: 'https://api.cspr.community/api/users/me',
+        url: 'https://api2.cspr.community/api/users/me',
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
     })
@@ -29,7 +29,7 @@ async function getName(token) {
 
 async function getBalance(token) {
     const response = await axios({
-        url: 'https://api.cspr.community/api/users/me/tasks',
+        url: 'https://api2.cspr.community/api/users/me/tasks',
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
     })
@@ -39,7 +39,7 @@ async function getBalance(token) {
 async function getTask(token) {
     try {
         const { data } = await axios({
-            url: 'https://api.cspr.community/api/users/me/tasks',
+            url: 'https://api2.cspr.community/api/users/me/tasks',
             method: 'GET',
             headers: { Authorization: `Bearer ${token}` }
         });
@@ -59,7 +59,7 @@ async function getTask(token) {
 async function clearAllTask(token, task_name) {
     try {
         await axios({
-            url: 'https://api.cspr.community/api/users/me/tasks',
+            url: 'https://api2.cspr.community/api/users/me/tasks',
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -73,7 +73,7 @@ async function clearAllTask(token, task_name) {
 
         await new Promise(resolve => setTimeout(resolve, 20000))
         const { data } = await axios({
-            url: 'https://api.cspr.community/api/users/me/tasks',
+            url: 'https://api2.cspr.community/api/users/me/tasks',
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${token}`,
